@@ -1,0 +1,32 @@
+{
+	"name": "fcc-headerparser",
+	"version": "0.1.0",
+	"author": "Yago Estévez",
+	"description": "A request header parser microservice, project for the FreeCodeCamp curriculum",
+	"main": "./server/index.js",
+	"scripts": {
+		"start": "nodemon ./server/index.js"
+	},
+	"engines": {
+		"node": ">=4.4.5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/yagoestevez/headerparser"
+	},
+	"keywords": [
+		"node",
+		"express",
+		"freecodecamp",
+		"header",
+		"parser",
+		"microservice",
+		"api"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"cors": "^2.8.4",
+		"express": "^4.16.3",
+		"pug": "^2.0.3"
+	}
+}

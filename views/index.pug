@@ -1,0 +1,47 @@
+extends _header.pug
+
+block append body
+  body
+    .container
+      header.header.py-3
+        .row.flex-nowrap.justify-content-between.align-items-center
+          .col-12.text-center
+            h1.header-logo.text-dark #{api ? 'Header Parser API' : 'Header Parser'}
+
+      main.row.justify-content-md-center
+        if api
+          .col-8
+            h2.mt-4 Welcome to the API.
+            p.lead  This is just the home page for the API microservice. Nothing too fancy. 
+              | To test the API you can do it by clicking the following links.
+          .col-8.mt-3
+            h3 Usage:
+            ul
+              li Get your IP address preferred language and system info by clicking the following link:
+                br/
+                a( href="https://headerparser-fcc-project-2.glitch.me/api/whoami" ) GET [domain]/api/whoami
+          .col-8.mt-3
+            h3 Output:
+            p The output will have the following format:
+            p 
+              code {
+                br/
+                | &nbsp;&nbsp;"ipaddress":"159.20.14.100",
+                br/
+                | &nbsp;&nbsp;"language":"en-US,en;q=0.5",
+                br/
+                | &nbsp;&nbsp;"software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"
+                br/
+                | }
+        else
+          .col-8
+            h1.mt-5 Greetings, visitor!
+            p.lead  You just arrived to the main page of the API. Here you will be presented with 
+              | the user stories required to pass the freeCodeCamp tests.
+            p If you just want to test the API, navigate to #[a( href="api/" ) the API docs].
+            h3 User Stories:
+            ul( class="user-stories" )
+              li I can get the IP address, preferred languages (from header #[code Accept-Language])
+                | and system infos (from header #[code User-Agent]) for my device.
+
+  include _footer.pug
