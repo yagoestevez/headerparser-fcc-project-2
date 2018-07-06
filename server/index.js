@@ -3,7 +3,7 @@ const CORS    = require( 'cors' );
 const app     = express( );
 
 // Just to make it work also under proxies: http://expressjs.com/en/guide/behind-proxies.html
-app.set( 'trust proxy' );
+app.set( 'trust proxy', true );
 
 // Sets PORT to the enviroment PORT number or 3000.
 app.set( 'PORT', process.env.PORT || 3000 );
