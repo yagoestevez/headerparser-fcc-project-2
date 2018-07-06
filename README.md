@@ -1,5 +1,7 @@
-HeaderParser <br />A request header parser microservice project for FreeCodeCamp
+Header Parser
 ----
+Second project for APIs and microservices on freeCodeCamp. Almost the same code than the first project (even less).
+
 #### USER STORIES:
 
 1. I can get the IP address, preferred languages (from header Accept-Language) and system infos (from header User-Agent) for my device. 
